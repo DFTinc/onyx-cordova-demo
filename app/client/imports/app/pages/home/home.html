@@ -1,0 +1,164 @@
+<ion-header>
+    <ion-navbar color="navbar">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            {{"page-home.title" | translate}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content background-color="white">
+
+    <ion-list no-lines>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setReturnRawImage" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.returnRawImage"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap showWhen="ios">
+            <ion-label>{{"onyx-config.labels.setReturnGrayRawImage" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.returnGrayRawImage"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setReturnProcessedImage" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.returnProcessedImage"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setReturnEnhancedImage" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.returnEnhancedImage"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap showWhen="ios">
+            <ion-label>{{"onyx-config.labels.setReturnBlackWhiteProcessedImage" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.returnBlackWhiteProcessedImage"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setReturnFingerprintTemplate" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.returnFingerprintTemplate"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setReturnWSQ" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.returnWSQ"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap showWhen="ios">
+            <ion-label>{{"onyx-config.labels.setReturnGrayRawWSQ" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.returnGrayRawWSQ"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setShouldSegment" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.shouldSegment"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setShouldConvertToISOTemplate" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.shouldConvertToISOTemplate"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setShouldInvert" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.shouldInvert"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setShowLoadingSpinner" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.showLoadingSpinner"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap showWhen="android">
+            <ion-label>{{"onyx-config.labels.setShowBackButton" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.showBackButton"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap showWhen="android">
+            <ion-label>{{"onyx-config.labels.setUseManualCapture" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.useManualCapture"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setUseOnyxLive" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.useOnyxLive"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setUseFlash" | translate}}</ion-label>
+            <ion-toggle [(ngModel)]="onyxConfig.useFlash"></ion-toggle>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setFlip" | translate}}</ion-label>
+            <ion-select [(ngModel)]="onyxConfig.flip">
+                <ion-option *ngFor="let option of ONYX_FLIP" value="{{option}}">{{option}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item text-wrap showWhen="android">
+            <ion-label>{{"onyx-config.labels.setLayoutPreference" | translate}}</ion-label>
+            <ion-select [(ngModel)]="onyxConfig.layoutPreference">
+                <ion-option *ngFor="let option of ONYX_LAYOUT_PREFERENCE" value="{{option}}">{{option}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setImageRotation" | translate}}</ion-label>
+            <ion-select [(ngModel)]="onyxConfig.imageRotation">
+                <ion-option *ngFor="let option of ONYX_IMAGE_ROTATION" value="{{option}}">{{option}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setReticleOrientation" | translate}}</ion-label>
+            <ion-select [(ngModel)]="onyxConfig.reticleOrientation">
+                <ion-option *ngFor="let option of ONYX_RETICLE_ORIENTATION" value="{{option}}">{{option}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setReticleAngle" | translate}}</ion-label>
+            <ion-input type="number" text-end placeholder="0"
+                       [(ngModel)]="onyxConfig.reticleAngle"></ion-input>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setReticleScale" | translate}}</ion-label>
+            <ion-input type="number" text-end placeholder="1.0"
+                       [(ngModel)]="onyxConfig.reticleScale"></ion-input>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-label>{{"onyx-config.labels.setBackgroundColorHexString" | translate}}</ion-label>
+            <ion-input type="text" text-end placeholder="#3698D3"
+                       [(ngModel)]="onyxConfig.backgroundColorHexString"></ion-input>
+        </ion-item>
+        <div showWhen="android">
+            <ion-item text-wrap>
+                <ion-label>{{"onyx-config.labels.setCropFactor" | translate}}</ion-label>
+                <ion-input type="number" text-end placeholder="0.8"
+                           [(ngModel)]="onyxConfig.cropFactor"></ion-input>
+            </ion-item>
+            <ion-item text-wrap>
+                <ion-label>{{"onyx-config.labels.cropSizeWidth" | translate}}</ion-label>
+                <ion-input type="number" text-end placeholder="512"
+                           [(ngModel)]="onyxConfig.cropSize.width"></ion-input>
+            </ion-item>
+            <ion-item text-wrap>
+                <ion-label>{{"onyx-config.labels.cropSizeHeight" | translate}}</ion-label>
+                <ion-input type="number" text-end placeholder="300"
+                           [(ngModel)]="onyxConfig.cropSize.height"></ion-input>
+            </ion-item>
+            <div padding></div>
+        </div>
+        <div showWhen="ios">
+            <ion-item text-wrap>
+                <ion-label>{{"onyx-config.labels.setCropFactor" | translate}}</ion-label>
+                <ion-input type="number" text-end placeholder="0.9"
+                           [(ngModel)]="onyxConfig.cropFactor"></ion-input>
+            </ion-item>
+            <ion-item text-wrap>
+                <ion-label>{{"onyx-config.labels.cropSizeWidth" | translate}}</ion-label>
+                <ion-input type="number" text-end placeholder="600"
+                           [(ngModel)]="onyxConfig.cropSize.width"></ion-input>
+            </ion-item>
+            <ion-item text-wrap>
+                <ion-label>{{"onyx-config.labels.cropSizeHeight" | translate}}</ion-label>
+                <ion-input type="number" text-end placeholder="960"
+                           [(ngModel)]="onyxConfig.cropSize.height"></ion-input>
+            </ion-item>
+            <div padding></div>
+        </div>
+    </ion-list>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <button ion-button block (click)="capture()">
+            {{"page-home.buttons.capture" | translate}}
+        </button>
+    </ion-toolbar>
+</ion-footer>

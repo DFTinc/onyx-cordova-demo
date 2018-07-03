@@ -1,0 +1,206 @@
+{
+  "language": "English",
+  "general": {
+    "ok": "OK",
+    "no": "NO",
+    "yes": "YES",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "accept": "Accept",
+    "submit": "Submit",
+    "save": "Save",
+    "noServerConnection": "Unable to communicate with app server.",
+    "alerts": {
+      "exit": {
+        "title": "Exit?",
+        "message": "Are you sure you want to exit this application?"
+      }
+    }
+  },
+  "menu": {
+    "logout": "Sign Out"
+  },
+  "page-home": {
+    "title": "Onyx Configuration",
+    "buttons": {
+      "capture": "Capture"
+    }
+  },
+  "welcome-header": {
+    "welcome": "Welcome",
+    "description": "This boilerplate project is to help you get a Meteor application, styled using Ionic 2, up and running in record time.",
+    "followIonicTutorial": "Continue by follow along on the tutorial section of the Ionic docs!"
+  },
+  "language-select": {
+    "header": "Select Language",
+    "language": "Language"
+  },
+  "demo": {
+    "greeting": "Hello Demo Component!",
+    "header": "This is the available data:",
+    "itemNote": "Age:"
+  },
+  "page-about": {
+    "title": "About",
+    "version": "Version"
+  },
+  "page-login": {
+    "signIn": "Sign In",
+    "createAccount": "Create Account",
+    "resetPassword": "Reset Password",
+    "forgotPassword": "Forgot Password"
+  },
+  "login-card": {
+    "labels": {
+      "email": "Email",
+      "password": "Password"
+    },
+    "errors": {
+      "socialSignIn": "This account uses social sign in.",
+      "signIn": "Sign In Error",
+      "invalidEmail": "Please enter a valid email address.",
+      "notRegistered": "This email address is not registered.",
+      "passwordRequired": "Please enter your password.",
+      "incorrectPassword": "Incorrect Password!"
+    }
+  },
+  "create-account-card": {
+    "labels": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "confirmEmail": "Confirm Email",
+      "confirmPassword": "Confirm Password"
+    },
+    "errors": {
+      "createAccount": "Create Account Error",
+      "alreadyRegistered": "This email address is already registered.",
+      "passwordsMatch": "Passwords do not match.",
+      "emailsMatch": "Email addresses do not match."
+    }
+  },
+  "forgot-password-card": {
+    "sendEmail": "Send Email",
+    "errors": {
+      "passwordReset": "Password Reset Error"
+    }
+  },
+  "password-reset-card": {
+    "labels": {
+      "passwordResetCode": "Password Reset Code"
+    },
+    "hints": {
+      "passwordResetCode": "Please copy and paste the password reset code from your email."
+    },
+    "errors": {
+      "password": "Please enter a new password.",
+      "confirmPassword": "Please confirm your new password.",
+      "passwordResetCode": "Password reset code invalid or expired."
+    }
+  },
+  "oauth-provider": {
+    "labels": {
+      "signInWith": "Sign in with"
+    }
+  },
+  "page-account-menu": {
+    "title": "Account Management"
+  },
+  "page-change-password": {
+    "title": "Change Password",
+    "success": "Successfully changed password.",
+    "labels": {
+      "currentPassword": "Current Password",
+      "newPassword": "New Password"
+    }
+  },
+  "page-edit-profile": {
+    "title": "Edit Profile",
+    "updateProfileSuccess": "Successfully updated profile.",
+    "errors": {
+      "updateProfile": "Error Updating Profile"
+    }
+  },
+  "add-image": {
+    "title": "Add Image (100Kb Max)",
+    "takePicture": "Take a picture",
+    "selectPhoto": "Select a photo",
+    "removeImage": "Remove Image"
+  },
+  "image-handler": {
+    "errors": {
+      "camera": "Camera Error",
+      "invalidScheme": "Invalid Data Scheme",
+      "resizeImage": "Image file size is > 100KB.<br>Please resize the image.",
+      "tooBig": "TOO BIG!",
+      "invalidFileType": "Invalid File Type",
+      "notAnImage": "The selected file was not an image."
+    }
+  },
+  "onyx-config": {
+    "labels": {
+      "setReturnRawImage": "setReturnRawImage",
+      "setReturnGrayRawImage": "setGrayRawImage",
+      "setReturnProcessedImage": "setReturnProcessedImage",
+      "setReturnEnhancedImage": "setReturnEnhancedImage",
+      "setReturnBlackWhiteProcessedImage": "setReturnBlackWhiteProcessedImage",
+      "setReturnFingerprintTemplate": "setReturnFingerprintTemplate",
+      "setReturnWSQ": "setReturnWSQ",
+      "setReturnGrayRawWSQ": "setReturnGrayRawWSQ",
+      "setShouldSegment": "setShouldSegment",
+      "setShouldConvertToISOTemplate": "setShouldConvertToISOTemplate",
+      "setImageRotation": "setImageRotation",
+      "setWholeFingerCrop": "setWholeFingerCrop",
+      "setUseManualCapture": "setUseManualCapture",
+      "setUseOnyxLive": "setUseOnyxLive",
+      "setUseFlash": "setUseFlash",
+      "setShowLoadingSpinner": "setShowLoadingSpinner",
+      "setShouldInvert": "setShouldInvert",
+      "setReticleOrientation": "setReticleOrientation",
+      "setReticleAngle": "setReticleAngle",
+      "setReticleScale": "setReticleScale",
+      "setFlip": "setFlip",
+      "setBackgroundColorHexString": "setBackgroundColorHexString",
+      "setCropFactor": "setCropFactor",
+      "setCropSize": "setCropFactor",
+      "setLayoutPreference": "setLayoutPreference",
+      "cropSizeWidth": "cropSizeWidth",
+      "cropSizeHeight": "cropSizeHeight",
+      "setShowBackButton": "setShowBackButton"
+    }
+  },
+  "page-onyx-result": {
+    "title": "Onyx Result",
+    "labels": {
+      "raw": "Raw",
+      "grayRaw": "Gray Raw",
+      "processed": "Processed",
+      "enhanced": "Enhanced",
+      "blackWhiteProcessed": "Black White Processed",
+      "base64EncodedWsqBytes": "Base64 Encoded WSQ Bytes",
+      "base64EncodedGrayRawWsqBytes": "Base64 Encoded Gray Raw WSQ Bytes",
+      "base64EncodedFingerprintTemplate": "Base64 Encoded Fingerprint Template",
+      "captureMetrics": "Capture Metrics",
+      "nfiqMetrics": "NFIQ Metrics",
+      "nfiqScore": "NFIQ Score",
+      "mlpScore": "MLP Score",
+      "livenessConfidence": "Liveness Confidence",
+      "focusQuality": "Focus Quality",
+      "distanceToCenter": "Distance To Center",
+      "fillProperties": "Fill Properties",
+      "heightRatio": "Height Ratio",
+      "overlapRatio": "OverlapRatio"
+    },
+    "buttons": {
+      "saveFingerprintTemplate": "Save Fingerprint Template",
+      "doMatch": "Verify"
+    },
+    "matching": "Matching",
+    "matchingDescription": "Verify this fingerprint template against the saved template.",
+    "matchResult": "Match Result",
+    "score": "Score",
+    "verified": "Verified",
+    "toast": {
+      "enrolledFingerprint": "Fingerprint template has been saved for this session."
+    }
+  }
+}

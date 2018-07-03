@@ -1,0 +1,37 @@
+.toolbar-item {
+  background-color: color($colors, navbar);
+  color: white;
+  p {
+    color: white;
+  }
+}
+
+.item.item-block p.user-item-email {
+  color: white;
+  font-size: 1.15rem;
+}
+
+.toolbar-item .item-inner {
+  border-bottom: none;
+}
+
+.no-user-image-icon {
+  font-size: 24px;
+  width: 36px;
+}
+
+/*Single item list for user*/
+ion-list.list-user {
+  margin-bottom: 0;
+}
+
+.thumbnail-icon {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+}
+
+.thumbnail-icon .icon {
+  line-height: 80px;
+  font-size: 8rem;
+}

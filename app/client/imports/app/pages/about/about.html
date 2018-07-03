@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar color="navbar">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{"page-about.title" | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="light">
+        <ion-list no-lines no-margin>
+            <ion-item text-wrap>
+                <ion-icon color="danger" item-right *ngIf="!isConnected">
+                    <i class="fa fa-chain-broken" aria-hidden="true"></i>
+                </ion-icon>
+                <ion-label text-center>
+                    {{"page-about.version" | translate}} {{version}}
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-toolbar>
+</ion-footer>
