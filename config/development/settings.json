@@ -2,7 +2,7 @@
   "public": {
     "appName": "Onyx Cordova",
     "version": "0.0.1 (Dev)",
-    "environment": "PRODUCTION",
+    "environment": "DEVELOPMENT",
     "onyxLicense": ""
   },
   "private": {
