@@ -18,10 +18,11 @@
     }
   },
   "menu": {
+    "home": "Home",
     "logout": "Sign Out"
   },
   "page-home": {
-    "title": "Onyx Configuration",
+    "header": "Onyx Configuration",
     "buttons": {
       "capture": "Capture"
     }

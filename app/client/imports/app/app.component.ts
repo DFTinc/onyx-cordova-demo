@@ -60,9 +60,9 @@ export class AppComponent extends MeteorComponent implements OnInit {
         // set our app's pages
         // title references a key in the language JSON to be translated by the translate pipe in the HTML
         this.noUserPages = [{
-            icon: "log-in",
-            title: 'page-login.signIn',
-            component: LoginPage,
+            icon: "home",
+            title: 'menu.home',
+            component: HomePage,
             rootPage: true
         }];
         this.pages = [{

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm-run-all prep:* --parallel watch:* meteor",
     "start:prod": "npm-run-all prep:* --parallel watch:* meteor:prod",
-    "meteor": "meteor run ios-device --settings ../config/development/settings.json",
+    "meteor": "meteor run android-device --settings ../config/development/settings.json",
     "meteor:prod": "meteor run --production --settings ../config/development/settings.json",
     "clear": "meteor reset",
     "meteor:update": "meteor update --all-packages",
@@ -16,7 +16,7 @@
     "prep": "mkdir -p public/stylesheets/ public/fonts/ && npm-run-all prep:* --parallel",
     "test": "meteor test --driver-package practicalmeteor:mocha",
     "test:ci": "meteor test --once --driver-package dispatch:mocha-phantomjs",
-    "meteor:build": "meteor build --directory ../build/ --architecture os.linux.x86_64"
+    "meteor:build": "meteor build --directory ../build/ --architecture os.linux.x86_64 --server https://onyx-cordova-demo.diamondfortress.com --mobile-settings ../config/production/settings.json"
   },
   "devDependencies": {
     "@types/chai": "4.0.5",

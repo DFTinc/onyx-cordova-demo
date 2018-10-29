@@ -1,6 +1,5 @@
 import {DemoCollection} from "../../../both/collections/demo.collection";
 import {Demo} from "../../../both/models/demo.model";
-import {OauthServiceConfig} from "../../lib/oauth-service-config";
 
 declare var process;
 
@@ -8,10 +7,6 @@ export class Main {
     start():void {
         this.printSettings();
         this.initFakeData();
-
-        var oauthProviderConfig = new OauthServiceConfig();
-        oauthProviderConfig.initOauthServices();
-
     }
 
     initFakeData():void {

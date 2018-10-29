@@ -1,23 +1,11 @@
 {
   "public": {
-    "appName": "",
-    "version": "0.0.1",
+    "appName": "Onyx Cordova",
+    "version": "5.0.0",
     "environment": "PRODUCTION",
     "onyxLicense": ""
   },
   "private": {
-    "oauth2": {
-      "providers": {
-        "google": {
-          "clientId": "",
-          "secret": ""
-        },
-        "facebook": {
-          "appId": "",
-          "secret": ""
-        }
-      }
-    }
   },
   "path": "/config/production/settings.json"
 }
