@@ -1,0 +1,125 @@
+{
+  "appName": "Onyx Camera",
+  "general": {
+    "ok": "OK",
+    "no": "NO",
+    "yes": "YES",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "accept": "Accept",
+    "submit": "Submit",
+    "save": "Save",
+    "noServerConnection": "Unable to communicate with app server.",
+    "alerts": {
+      "exit": {
+        "title": "Exit?",
+        "message": "Are you sure you want to exit this application?"
+      }
+    }
+  },
+  "page-home": {
+    "headers": {
+      "configuration": "Onyx Configuration",
+      "requestedOutput": "Requested Output",
+      "outputConfig": "Output Configuration",
+      "ui": "User Interface",
+      "antiSpoof": "Anti-Spoofing"
+    },
+    "buttons": {
+      "capture": "Capture"
+    }
+  },
+  "onyx-config": {
+    "labels": {
+      "setReturnRawImage": "setReturnRawImage",
+      "setReturnGrayRawImage": "setGrayRawImage",
+      "setReturnProcessedImage": "setReturnProcessedImage",
+      "setReturnEnhancedImage": "setReturnEnhancedImage",
+      "setReturnBlackWhiteProcessedImage": "setReturnBlackWhiteProcessedImage",
+      "setReturnFingerprintTemplate": "setReturnFingerprintTemplate",
+      "setReturnWSQ": "setReturnWSQ",
+      "setReturnGrayRawWSQ": "setReturnGrayRawWSQ",
+      "setShouldSegment": "setShouldSegment",
+      "setShouldConvertToISOTemplate": "setShouldConvertToISOTemplate",
+      "setImageRotation": "setImageRotation",
+      "setWholeFingerCrop": "setWholeFingerCrop",
+      "setUseManualCapture": "setUseManualCapture",
+      "setUseOnyxLive": "setUseOnyxLive",
+      "setUseFlash": "setUseFlash",
+      "setShowLoadingSpinner": "setShowLoadingSpinner",
+      "setShouldInvert": "setShouldInvert",
+      "setReticleOrientation": "setReticleOrientation",
+      "setReticleAngle": "setReticleAngle",
+      "setReticleScale": "setReticleScale",
+      "setFlip": "setFlip",
+      "setBackgroundColorHexString": "setBackgroundColorHexString",
+      "setCropFactor": "setCropFactor",
+      "setCropSize": "setCropFactor",
+      "setLayoutPreference": "setLayoutPreference",
+      "cropSizeWidth": "cropSizeWidth",
+      "cropSizeHeight": "cropSizeHeight",
+      "setShowBackButton": "setShowBackButton",
+      "setShowManualCaptureText": "setShowManualCaptureText",
+      "setManualCaptureText": "setManualCaptureText",
+      "setBackButtonText": "setBackButtonText",
+      "setInfoText": "setInfoText",
+      "setInfoTextColorHexString": "setInfoTextColorHexString",
+      "setBase64ImageData": "setBase64ImageData"
+    },
+    "placeholders": {
+      "manualCaptureText": "Touch the screen to capture.",
+      "backButtonText": "Back",
+      "infoText": "Custom message",
+      "base64ImageData": "base64 encoded data"
+    }
+  },
+  "page-onyx-result": {
+    "title": "Onyx Result",
+    "labels": {
+      "onyxImagery": "Onyx Imagery",
+      "raw": "Raw",
+      "grayRaw": "Gray Raw",
+      "processed": "Processed",
+      "enhanced": "Enhanced",
+      "blackWhiteProcessed": "Black White Processed",
+      "base64EncodedWsqBytes": "Base64 Encoded WSQ Bytes",
+      "base64EncodedGrayRawWsqBytes": "Base64 Encoded Gray Raw WSQ Bytes",
+      "base64EncodedFingerprintTemplate": "Base64 Encoded Fingerprint Template",
+      "captureMetrics": "Capture Metrics",
+      "nfiqMetrics": "NFIQ Metrics",
+      "nfiqScore": "NFIQ Score",
+      "mlpScore": "MLP Score",
+      "livenessConfidence": "Liveness Confidence",
+      "focusQuality": "Focus Quality",
+      "distanceToCenter": "Distance To Center",
+      "fillProperties": "Fill Properties",
+      "heightRatio": "Height Ratio",
+      "overlapRatio": "OverlapRatio"
+    },
+    "buttons": {
+      "saveImagery": "Save Imagery",
+      "saveFingerprintTemplate": "Save Fingerprint Template",
+      "doMatch": "Verify",
+      "copyToClipboard": "Copy to Clipboard"
+    },
+    "matching": "Matching",
+    "matchingDescription": "Verify this fingerprint template against the saved template.",
+    "matchResult": "Match Result",
+    "score": "Score",
+    "verified": "Verified",
+    "toast": {
+      "enrolledFingerprint": "Fingerprint template has been saved to storage.",
+      "copiedToClipboard": "Copied to clipboard.",
+      "savedImage": "Saved image to gallery: {{path}}"
+    },
+    "errors": {
+      "saveImagery": {
+        "title": "Save Imagery Error",
+        "limitReached": "Sorry, you have reached the maximum limit for saving imagery."
+      }
+    }
+  },
+  "onyxError": {
+    "title": "Onyx Error"
+  }
+}

@@ -11,22 +11,12 @@ git clone https://github.com/DFTinc/onyx-cordova-demo
 npm install
 ```
 
-* Add your Onyx license key to `config/development/settings.json` as the value for the `onyxLicense` key.
+* Add your Onyx license key to `src/services/onyx.service.ts` as the value for the `onyxLicense` key.
 
-* Run the app to build the project.  The `start` script will run the app for an iOS device.
+* Run the app to build the Android Studio project
 
-```
-npm start
-```
-
-* Install the OnyxCamera CocoaPod
-
-```
-^C // to stop running the app
-
-cd .meteor/local/cordova-build/platforms/ios/
-
-pod install
+```angular2html
+ionic cordova run android
 ```
 
-* Open the project `.xcworkspace` file to run the app on an iOS device from XCode. 
+* Open the Android Studio project and update to use Gradle 4.4

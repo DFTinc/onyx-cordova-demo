@@ -1,0 +1,7 @@
+{
+  "name": "onyx-ionic-demo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

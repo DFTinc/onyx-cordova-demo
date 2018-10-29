@@ -1,0 +1,180 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{"page-onyx-result.title" | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content background-color="gray">
+
+  <ion-card *ngIf="onyxResult.rawFingerprintDataUri">
+    <ion-card-header>
+      <h1>{{"page-onyx-result.labels.raw" | translate}}</h1>
+    </ion-card-header>
+    <img [src]="domSanitizer.bypassSecurityTrustUrl(onyxResult.rawFingerprintDataUri)">
+  </ion-card>
+
+  <ion-card *ngIf="onyxResult.grayRawFingerprintDataUri">
+    <ion-card-header>
+      <h1>{{"page-onyx-result.labels.grayRaw" | translate}}</h1>
+    </ion-card-header>
+    <img [src]="domSanitizer.bypassSecurityTrustUrl(onyxResult.grayRawFingerprintDataUri)">
+  </ion-card>
+
+  <ion-card *ngIf="onyxResult.processedFingerprintDataUri">
+    <ion-card-header>
+      <h1>{{"page-onyx-result.labels.processed" | translate}}</h1>
+    </ion-card-header>
+    <img [src]="domSanitizer.bypassSecurityTrustUrl(onyxResult.processedFingerprintDataUri)">
+  </ion-card>
+
+  <ion-card *ngIf="onyxResult.enhancedFingerprintDataUri">
+    <ion-card-header>
+      <h1>{{"page-onyx-result.labels.enhanced" | translate}}</h1>
+    </ion-card-header>
+    <img [src]="domSanitizer.bypassSecurityTrustUrl(onyxResult.enhancedFingerprintDataUri)">
+  </ion-card>
+
+  <ion-card *ngIf="onyxResult.blackWhiteProcessedFingerprintDataUri">
+    <ion-card-header>
+      <h1>{{"page-onyx-result.labels.blackWhiteProcessed" | translate}}</h1>
+    </ion-card-header>
+    <img [src]="domSanitizer.bypassSecurityTrustUrl(onyxResult.blackWhiteProcessedFingerprintDataUri)">
+  </ion-card>
+
+  <ion-card *ngIf="onyxResult.rawFingerprintDataUri ||
+  onyxResult.grayRawFingerprintDataUri ||
+  onyxResult.processedFingerprintDataUri ||
+  onyxResult.enhancedFingerprintDataUri ||
+  onyxResult.blackWhiteProcessedFingerprintDataUri">
+    <ion-card-header text-wrap>
+      <h1>{{"page-onyx-result.labels.onyxImagery" | translate}}</h1>
+    </ion-card-header>
+    <ion-card-content>
+      <button ion-button block (click)="saveImagery()">
+        {{"page-onyx-result.buttons.saveImagery" | translate}}
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="onyxResult.base64EncodedFingerprintTemplate">
+    <ion-card-header text-wrap>
+      <h1>{{"page-onyx-result.labels.base64EncodedFingerprintTemplate" | translate}}</h1>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        {{onyxResult.base64EncodedFingerprintTemplate}}
+      </ion-item>
+      <button ion-button block (click)="saveFingerprintTemplate()">
+        {{"page-onyx-result.buttons.saveFingerprintTemplate" | translate}}
+      </button>
+      <button ion-button block margin-top
+              (click)="copyToClipboard(onyxResult.base64EncodedFingerprintTemplate)">
+        {{"page-onyx-result.buttons.copyToClipboard" | translate}}
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="onyxResult.base64EncodedWsqBytes">
+    <ion-card-header text-wrap>
+      <h1>{{"page-onyx-result.labels.base64EncodedWsqBytes" | translate}}</h1>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        {{onyxResult.base64EncodedWsqBytes}}
+      </ion-item>
+      <button ion-button block margin-top
+              (click)="copyToClipboard(onyxResult.base64EncodedWsqBytes)">
+        {{"page-onyx-result.buttons.copyToClipboard" | translate}}
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="onyxResult.base64EncodedGrayRawWsqBytes">
+    <ion-card-header text-wrap>
+      <h1>{{"page-onyx-result.labels.base64EncodedGrayRawWsqBytes" | translate}}</h1>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        {{onyxResult.base64EncodedGrayRawWsqBytes}}
+      </ion-item>
+      <button ion-button block margin-top
+              (click)="copyToClipboard(onyxResult.base64EncodedGrayRawWsqBytes)">
+        {{"page-onyx-result.buttons.copyToClipboard" | translate}}
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="onyxResult.captureMetrics">
+    <ion-card-header>
+      <h1>{{"page-onyx-result.labels.captureMetrics" | translate}}</h1>
+    </ion-card-header>
+    <ion-list margin-bottom>
+      <ion-item text-wrap *ngIf="onyxResult.captureMetrics.livenessConfidence != -1">
+        <ion-label>
+          {{"page-onyx-result.labels.livenessConfidence" | translate}}
+        </ion-label>
+        <div item-right>
+          {{onyxResult.captureMetrics.livenessConfidence}}
+        </div>
+      </ion-item>
+      <ion-item text-wrap *ngIf="onyxResult.captureMetrics.focusQuality">
+        <ion-label>
+          {{"page-onyx-result.labels.focusQuality" | translate}}
+        </ion-label>
+        <div item-right>
+          {{onyxResult.captureMetrics.focusQuality}}
+        </div>
+      </ion-item>
+      <ion-item text-wrap *ngIf="onyxResult.captureMetrics.distanceToCenter">
+        <ion-label>
+          {{"page-onyx-result.labels.distanceToCenter" | translate}}
+        </ion-label>
+        <div item-right>
+          {{onyxResult.captureMetrics.distanceToCenter}}
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list no-lines margin-bottom
+              *ngIf="onyxResult.captureMetrics.nfiqMetrics">
+      <ion-list-header>
+        <h1>{{"page-onyx-result.labels.nfiqMetrics" | translate}}</h1>
+      </ion-list-header>
+      <ion-item text-wrap>
+        <ion-label>{{"page-onyx-result.labels.nfiqScore" | translate}}</ion-label>
+        <div item-right>{{onyxResult.captureMetrics.nfiqMetrics.nfiqScore}}</div>
+      </ion-item>
+      <ion-item text-wrap>
+        <ion-label>{{"page-onyx-result.labels.mlpScore" | translate}}</ion-label>
+        <div item-right>{{onyxResult.captureMetrics.nfiqMetrics.mlpScore}}</div>
+      </ion-item>
+    </ion-list>
+    <ion-list no-lines margin-bottom
+              *ngIf="onyxResult.captureMetrics.fillProperties">
+      <ion-list-header>
+        <h1>{{"page-onyx-result.labels.fillProperties" | translate}}</h1>
+      </ion-list-header>
+      <ion-item text-wrap>
+        <ion-label>{{"page-onyx-result.labels.heightRatio" | translate}}</ion-label>
+        <div item-right>{{onyxResult.captureMetrics.fillProperties.heightRatio}}</div>
+      </ion-item>
+      <ion-item text-wrap>
+        <ion-label>{{"page-onyx-result.labels.overlapRatio" | translate}}</ion-label>
+        <div item-right>{{onyxResult.captureMetrics.fillProperties.overlapRatio}}</div>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card *ngIf="onyxResult.base64EncodedFingerprintTemplate">
+    <ion-card-header>
+      <h1>{{"page-onyx-result.matching" | translate}}</h1>
+    </ion-card-header>
+    <ion-card-content>
+      {{"page-onyx-result.matchingDescription" | translate}}
+      <button ion-button block (click)="doMatch()">{{"page-onyx-result.buttons.doMatch" | translate}}</button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
